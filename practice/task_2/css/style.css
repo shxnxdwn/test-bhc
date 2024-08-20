@@ -39,7 +39,7 @@ body {
 }
 
 .table__body td:nth-child(1) {
-    min-width: 50px;
+    min-width: 100px;
 }
 
 .table__body td:nth-child(2) {
