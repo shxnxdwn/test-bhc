@@ -1,8 +1,8 @@
-const GET_DATA_URL = 'https://jsonplaceholder.typicode.com/posts';
+const DATA_URL = 'https://jsonplaceholder.typicode.com/posts';
 
 
 const getData = (renderDataCb) => {
-    fetch(GET_DATA_URL)
+    fetch(DATA_URL)
         .then((response) => response.json())
         .then((posts) => {
             renderDataCb(posts);
