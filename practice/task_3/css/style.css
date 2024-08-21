@@ -56,6 +56,9 @@ body {
 
 .table__head {
     cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .table__head th {
