@@ -14,8 +14,8 @@ body {
     width: 1px;
     height: 1px;
     margin: -1px;
-    border: 0;
     padding: 0;
+    border: 0;
     white-space: nowrap;
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
@@ -24,19 +24,38 @@ body {
 
 .header {
     padding: 20px;
-    color: white;
+    color: #FFFFFF;
     text-align: center;
     background-color: #79d77d;
 }
 
-.main {
-    margin: 20px auto;
+.content {
     max-width: 1200px;
+    margin: 20px auto;
+}
+
+.search {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #79d77d;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.search:focus {
+    background-color: #e6f3e5;
 }
 
 .table {
     width: 100%;
-    padding: 20px;
+    margin: 30px 0;
+}
+
+.table__head {
+    cursor: pointer;
 }
 
 .table__head th {
