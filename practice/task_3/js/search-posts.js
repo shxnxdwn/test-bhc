@@ -7,10 +7,10 @@ const searchPosts = (postsArray, renderCb) => {
         const inputValue = searchInput.value.trim().toLowerCase();
 
         if (inputValue.length > 2) {
-            const searchedData = postsArray.filter((post) =>
+            const filteredPosts = postsArray.filter((post) =>
                 post.title.toLowerCase().includes(inputValue) || post.body.toLowerCase().includes(inputValue)
             );
-            renderCb(searchedData);
+            renderCb(filteredPosts);
         } else {
             renderCb(postsArray);
         }

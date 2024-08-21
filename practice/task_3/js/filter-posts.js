@@ -9,7 +9,7 @@ const filterClicked = {
 const filterPosts = (data, renderCb) => {
     const filterContainer = document.querySelector('.filter-container');
 
-    const sortData = (data, filterType) => {
+    const sortPosts = (data, filterType) => {
         switch (filterType) {
             case 'user-id':
                 if (filterClicked.userId) {
@@ -57,7 +57,7 @@ const filterPosts = (data, renderCb) => {
         if (event.target.closest('.filter-container')) {
             const [ filterClass ] = event.target.classList;
             const filterType = filterClass.replace('table__', '');
-            renderCb(sortData(data, filterType));
+            renderCb(sortPosts(data, filterType));
         }
     });
 };
