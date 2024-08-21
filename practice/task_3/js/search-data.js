@@ -16,7 +16,7 @@ const handleSearch = (postsArray, renderCb) => {
         }
     };
 
-    searchInput.addEventListener('input', debounce(handleSearch, 500));
+    searchInput.addEventListener('input', debounce(searchPosts, 500));
 };
 
 export { handleSearch };
