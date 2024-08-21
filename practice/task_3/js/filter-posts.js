@@ -1,5 +1,3 @@
-const filterContainer = document.querySelector('.filter-container');
-
 const filterClicked = {
     userId: false,
     postId: false,
@@ -8,7 +6,9 @@ const filterClicked = {
 };
 
 
-const handleFilterClick = (data, renderCb) => {
+const filterPosts = (data, renderCb) => {
+    const filterContainer = document.querySelector('.filter-container');
+
     const sortData = (data, filterType) => {
         switch (filterType) {
             case 'user-id':
@@ -63,4 +63,4 @@ const handleFilterClick = (data, renderCb) => {
 };
 
 
-export { handleFilterClick };
+export { filterPosts };

@@ -1,6 +1,6 @@
 import { debounce } from './debounce.js';
 
-const handleSearch = (postsArray, renderCb) => {
+const searchPosts = (postsArray, renderCb) => {
     const searchInput = document.querySelector('.search');
 
     const searchPosts = () => {
@@ -19,4 +19,4 @@ const handleSearch = (postsArray, renderCb) => {
     searchInput.addEventListener('input', debounce(searchPosts, 500));
 };
 
-export { handleSearch };
+export { searchPosts };
