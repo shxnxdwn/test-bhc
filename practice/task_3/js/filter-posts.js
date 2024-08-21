@@ -1,3 +1,5 @@
+import {debounce} from './debounce.js';
+
 const filterClicked = {
     userId: false,
     postId: false,
@@ -5,9 +7,24 @@ const filterClicked = {
     postBody: false
 };
 
-
-const filterPosts = (data, renderCb) => {
+const filterPosts = (postsArray, renderCb) => {
     const filterContainer = document.querySelector('.filter-container');
+    const searchInput = document.querySelector('.search');
+
+
+    const searchPosts = () => {
+        const inputValue = searchInput.value.trim().toLowerCase();
+
+        if (inputValue.length > 2) {
+            const filteredPosts = postsArray.filter((post) =>
+                post.title.toLowerCase().includes(inputValue) || post.body.toLowerCase().includes(inputValue)
+            );
+            renderCb(filteredPosts);
+        } else {
+            renderCb(postsArray);
+        }
+    };
+
 
     const sortPosts = (data, filterType) => {
         switch (filterType) {
@@ -57,9 +74,11 @@ const filterPosts = (data, renderCb) => {
         if (event.target.closest('.filter-container')) {
             const [ filterClass ] = event.target.classList;
             const filterType = filterClass.replace('table__', '');
-            renderCb(sortPosts(data, filterType));
+            renderCb(sortPosts(postsArray, filterType));
         }
     });
+
+    searchInput.addEventListener('input', debounce(searchPosts, 500));
 };
 
 
