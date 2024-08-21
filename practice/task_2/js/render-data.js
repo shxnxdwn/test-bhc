@@ -1,4 +1,4 @@
-const renderData = (postsArray) => {
+const renderPosts = (postsArray) => {
     const tableBody = document.querySelector('.table__body');
 
     for (let post of postsArray) {
@@ -15,4 +15,4 @@ const renderData = (postsArray) => {
 };
 
 
-export { renderData };
+export { renderPosts };

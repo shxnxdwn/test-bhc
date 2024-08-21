@@ -1,4 +1,4 @@
-import { getData } from './get-data.js';
-import { renderData } from './render-data.js';
+import { getPosts } from './get-data.js';
+import { renderPosts } from './render-data.js';
 
-getData(renderData);
+getPosts(renderPosts);

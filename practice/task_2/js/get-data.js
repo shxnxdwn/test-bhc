@@ -1,13 +1,13 @@
-const DATA_URL = 'https://jsonplaceholder.typicode.com/posts';
+const POSTS_URL = 'https://jsonplaceholder.typicode.com/posts';
 
 
-const getData = (renderDataCb) => {
-    fetch(DATA_URL)
+const getPosts = (renderCb) => {
+    fetch(POSTS_URL)
         .then((response) => response.json())
         .then((posts) => {
-            renderDataCb(posts);
+            renderCb(posts);
         });
 }
 
 
-export { getData };
+export { getPosts };
