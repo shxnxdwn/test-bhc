@@ -1,6 +1,6 @@
 import { debounce } from './debounce.js';
 
-const MIN_SEARCH_LENGTH = 2;
+const MIN_SEARCH_LENGTH = 3;
 const DEBOUNCE_DELAY = 500;
 
 const filterStage = {
@@ -21,7 +21,7 @@ const filterPosts = (postsArray, renderCb) => {
     const searchPosts = () => {
         const inputValue = searchInput.value.trim().toLowerCase();
 
-        if (inputValue.length > MIN_SEARCH_LENGTH) {
+        if (inputValue.length >= MIN_SEARCH_LENGTH) {
             filteredPosts = postsArray.filter((post) =>
                 post.title.toLowerCase().includes(inputValue) || post.body.toLowerCase().includes(inputValue)
             );
