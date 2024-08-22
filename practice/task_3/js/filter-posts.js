@@ -1,5 +1,8 @@
 import { debounce } from './debounce.js';
 
+const MIN_SEARCH_LENGTH = 2;
+const DEBOUNCE_DELAY = 500;
+
 const filterStage = {
     userId: true,
     postId: true,
@@ -18,7 +21,7 @@ const filterPosts = (postsArray, renderCb) => {
     const searchPosts = () => {
         const inputValue = searchInput.value.trim().toLowerCase();
 
-        if (inputValue.length > 2) {
+        if (inputValue.length > MIN_SEARCH_LENGTH) {
             filteredPosts = postsArray.filter((post) =>
                 post.title.toLowerCase().includes(inputValue) || post.body.toLowerCase().includes(inputValue)
             );
@@ -72,7 +75,7 @@ const filterPosts = (postsArray, renderCb) => {
         }
     });
 
-    searchInput.addEventListener('input', debounce(searchPosts, 500));
+    searchInput.addEventListener('input', debounce(searchPosts, DEBOUNCE_DELAY));
 
     filteredPosts = postsArray.slice();
     renderCb(filteredPosts);
