@@ -44,16 +44,11 @@
     box-sizing: border-box;
 }
 
-input[type='file'] {
-    color: transparent;
-}
-
 .body {
     min-height: 100vh;
     font-family: 'PT-Sans-Regular', sans-serif;
     font-size: 16px;
     letter-spacing: 0;
-    background-color: cornflowerblue; /* TODO: remove */
 }
 
 .modal-open {
@@ -91,8 +86,6 @@ input[type='file'] {
     width: 100%;
 }
 
-
-
 /* == Header ======================================================================================================== */
 
 .header {
@@ -104,6 +97,13 @@ input[type='file'] {
 
 .header__title {
     font-family: 'Arial', sans-serif;
+}
+
+/* == Main ========================================================================================================== */
+
+.main {
+    width: 100%;
+    height: 100%;
 }
 
 /* == Block Content ================================================================================================= */
@@ -138,10 +138,25 @@ input[type='file'] {
 
 /* == Block Modal =================================================================================================== */
 
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100px;
+    overflow: auto;
+}
+
 .modal {
+    position: relative;
+    top: 20%;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
     max-width: 754px;
-    margin: 0 auto;
-    padding: 53px 95px;
+    margin-bottom: 100px;
+    padding: 53px 97px;
     border-radius: 12px;
     background-color: #FFFFFF;
 }
@@ -154,8 +169,12 @@ input[type='file'] {
     color: #0C1014;
 }
 
-.form {
+.modal__form {
     margin-top: 35px;
+}
+
+
+.form {
     display: flex;
     flex-direction: column;
 }
@@ -169,6 +188,7 @@ input[type='file'] {
     display: flex;
     flex-direction: column;
     gap: 32px;
+    flex: 1 1 auto;
 }
 
 .form__bottom {
@@ -182,6 +202,7 @@ input[type='file'] {
     margin-top: 50px;
 }
 
+
 .form__container {
     width: 100%;
     padding: 7px 8px 7px 16px;
@@ -194,18 +215,15 @@ input[type='file'] {
     padding: 15px 16px;
 }
 
+.form__logo-container {
+    position: relative;
+    width: 175px;
+    padding: 0;
+    border: none;
+}
+
 .form__activity-container {
     padding: 8px 8px 8px 16px;
-}
-
-.form-input {
-    display: block;
-    border: none;
-    width: 100%;
-}
-
-.form-input:focus {
-    outline: none;
 }
 
 .form__label {
@@ -217,23 +235,61 @@ input[type='file'] {
     color: #6A6E72;
 }
 
-.form__label_required::before{
+.form__label_required::before,
+.form__logo-text::before{
     content: '✱';
     margin-right: 2px;
     color: #D90000;
 }
 
 .form__label_logo {
+    position: relative;
     font-family: 'PT-Sans-Bold', sans-serif;
     font-size: 14px;
     font-weight: 700;
     line-height: 16px;
+    text-align: center;
     color: #6A6E72;
+    cursor: pointer;
+}
+
+.form__label_logo:before {
+    content: url('../icons/file-upload.svg');
+    position: absolute;
+    top: 34%;
+    left: 40%;
+    display: block;
+}
+
+.form__label_logo:after {
+    content: 'Выберите файл';
+    position: absolute;
+    top: 53%;
+    left: 26%;
+    max-width: 85px;
+    font-family: 'PT-Sans-Regular', sans-serif;
+    font-weight: 400;
+    font-size: 19px;
+    text-align: center;
+    text-decoration: underline;
+    line-height: 28px;
+    color: #FFFFFF;
 }
 
 .form__label_required-logo::before {
     font-size: 12px;
     font-weight: 400;
+}
+
+
+.form-input {
+    display: block;
+    border: none;
+    width: 100%;
+}
+
+.form-input:focus {
+    outline: none;
 }
 
 .form-input,
@@ -246,10 +302,32 @@ input[type='file'] {
     white-space: nowrap;
 }
 
+
+.form__logo {
+    display: none;
+}
+
+.form__logo-image {
+    margin-top: 7px;
+    display: block;
+    width: 100%;
+}
+
+.form__logo-button {
+    position: absolute;
+    top: 15%;
+    right: 3%;
+    z-index: 3;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
 .form__icon {
     display: block;
     padding-left: 10px;
 }
+
 
 .form__send-button {
     font-family: 'Lato-SemiBold', sans-serif;
@@ -265,7 +343,3 @@ input[type='file'] {
     line-height: 24px;
     background-color: transparent;
 }
-
-
-
-

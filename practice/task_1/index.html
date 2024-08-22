@@ -18,90 +18,99 @@
             <button class="content__button button-show button">Написать</button>
         </section>
 
-        <section class="modal">
-            <h2 class="modal__title">Стать партнёром проекта</h2>
+        <div class="modal-wrapper visually-hidden">
+            <section class="modal">
+                <h2 class="modal__title">Стать партнёром проекта</h2>
 
-            <form class="modal__form form" action="#" enctype="multipart/form-data" method="post">
-                <div class="form__top">
-                    <div class="form__top-left">
-                        <div class="form__container form__organization-name-container">
-                            <label class="form__label form__label_required" for="organization-name">Название организации</label>
-                            <input class="form__organization-name form-input" type="text" id="organization-name"
-                                   name="organization-name" placeholder="АВЦ" required>
+                <form class="modal__form form" action="#" enctype="multipart/form-data" method="post">
+                    <div class="form__top">
+                        <div class="form__top-left">
+                            <div class="form__container form__organization-name-container">
+                                <label class="form__label form__label_required" for="organization-name">Название организации</label>
+                                <input class="form__organization-name form-input" type="text" id="organization-name"
+                                       name="organization-name" placeholder="АВЦ" required>
+                            </div>
+                            <div class="form__container form__phone-container">
+                                <label class="form__label form__label_required" for="phone">Телефон</label>
+                                <input class="form__phone form-input" type="tel" id="phone" name="phone"
+                                       placeholder="+7 933 848-34-33" required>
+                            </div>
+                            <div class="form__container form__email-container">
+                                <label class="form__label form__label_required" for="email">E-mail</label>
+                                <input class="form__email form-input" type="email" id="email" name="email"
+                                       placeholder="avc@gmail.com" required>
+                            </div>
                         </div>
-                        <div class="form__container form__phone-container">
-                            <label class="form__label form__label_required" for="phone">Телефон</label>
-                            <input class="form__phone form-input" type="tel" id="phone" name="phone"
-                                   placeholder="+7 933 848-34-33" required>
-                        </div>
-                        <div class="form__container form__email-container">
-                            <label class="form__label form__label_required" for="email">E-mail</label>
-                            <input class="form__email form-input" type="email" id="email" name="email"
-                                   placeholder="avc@gmail.com" required>
-                        </div>
-                    </div>
-                    <div class="form__top-right">
-                        <div class="form__container form__logo-container">
-                            <label class="form__label form__label_required form__label_required-logo form__label_logo"
-                                   for="logo">Логотип (jpeg, png)</label>
-                            <input class="form__logo form-input" type="file" id="logo" name="logo"
-                                   accept=".jpg, .jpeg, .png" required>
+                        <div class="form__top-right">
+                            <div class="form__container form__logo-container">
+                                <button class="form__logo-button" type="button">
+                                    <img src="icons/close.png" alt="Кнопка отмены выбора логотипа">
+                                </button>
+                                <label class="form__label form__label_required-logo form__label_logo"
+                                       for="logo">
+                                    <span class="form__logo-text">Логотип (jpeg, png)</span>
+                                    <img class="form__logo-image" src="images/logo-example.png" alt="Пример логотипа">
+                                </label>
+                                <input class="form__logo form-input" type="file" id="logo" name="logo"
+                                       accept=".jpg, .jpeg, .png" required>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="form__bottom">
-                    <div class="form__container form__activity-container">
-                        <label class="form__label form__label_required" for="activity">Направление</label>
-                        <select class="form__activity form-input" id="activity" name="activity" required>
-                            <option value="Экология" selected>Экология</option>
-                            <option value="Биология">Биология</option>
-                        </select>
+                    <div class="form__bottom">
+                        <div class="form__container form__activity-container">
+                            <label class="form__label form__label_required" for="activity">Направление</label>
+                            <select class="form__activity form-input" id="activity" name="activity" required>
+                                <option class="select-placeholder" value="" selected disabled>Экология</option>
+                                <option value="Экология">Экология</option>
+                                <option value="Биология">Биология</option>
+                            </select>
+                        </div>
+                        <div class="form__container form__container_no-description form__site-container">
+                            <label class="form__label visually-hidden" for="site">Сайт</label>
+                            <input class="form__site form-input" type="url" id="site" name="site" placeholder="avc.ru">
+                            <img class="form__icon" src="icons/site.svg" alt="Иконка сайта">
+                        </div>
+                        <div class="form__container form__container_no-description form__vk-container">
+                            <label class="form__label visually-hidden" for="vk">VK</label>
+                            <input class="form__vk form-input" id="vk" name="vk" type="url" placeholder="vk.com/shans">
+                            <img class="form__icon" src="icons/vk.svg" alt="Иконка VK">
+                        </div>
+                        <div class="form__container form__container_no-description form__ok-container">
+                            <label class="form__label visually-hidden" for="ok">Одноклассники</label>
+                            <input class="form__ok form-input" id="ok" name="ok" type="url" placeholder="ok.com/shans">
+                            <img class="form__icon" src="icons/ok.svg" alt="Иконка Одноклассники">
+                        </div>
+                        <div class="form__container form__container_no-description form__facebook-container">
+                            <label class="form__label visually-hidden" for="facebook">Facebook</label>
+                            <input class="form__facebook form-input" id="facebook" name="facebook" type="url"
+                                   placeholder="facebook.com/shans">
+                            <img class="form__icon" src="icons/facebook.svg" alt="Иконка Facebook">
+                        </div>
+                        <div class="form__container form__container_no-description form__instagram-container">
+                            <label class="form__label visually-hidden" for="instagram">Instagram</label>
+                            <input class="form__instagram form-input" id="instagram" name="instagram" type="url"
+                                   placeholder="instagram.com/shans">
+                            <img class="form__icon" src="icons/instagram.svg" alt="Иконка Instagram">
+                        </div>
+                        <div class="form__container form__container_no-description form__youtube-container">
+                            <label class="form__label visually-hidden" for="youtube">Youtube</label>
+                            <input class="form__youtube form-input" id="youtube" name="youtube" type="url"
+                                   placeholder="youtube.com/shans">
+                            <img class="form__icon" src="icons/youtube.svg" alt="Иконка Youtube">
+                        </div>
+                        <div class="form__container form__ceo-container">
+                            <label class="form__label" for="ceo">Руководитель</label>
+                            <input class="form__ceo form-input" id="ceo" name="ceo" type="text"
+                                   placeholder="Александров Иван Васильевич">
+                        </div>
                     </div>
-                    <div class="form__container form__container_no-description form__site-container">
-                        <label class="form__label visually-hidden" for="site">Сайт</label>
-                        <input class="form__site form-input" type="url" id="site" name="site" placeholder="avc.ru">
-                        <img class="form__icon" src="icons/site.svg" alt="Иконка сайта">
+                    <div class="form__buttons">
+                        <button class="form__send-button button button-fullwidth" type="submit">Стать партнёром проекта</button>
+                        <button class="form__reset-button button button-fullwidth" type="button">Отменить</button>
                     </div>
-                    <div class="form__container form__container_no-description form__vk-container">
-                        <label class="form__label visually-hidden" for="vk">VK</label>
-                        <input class="form__vk form-input" id="vk" name="vk" type="url" placeholder="vk.com/shans">
-                        <img class="form__icon" src="icons/vk.svg" alt="Иконка VK">
-                    </div>
-                    <div class="form__container form__container_no-description form__ok-container">
-                        <label class="form__label visually-hidden" for="ok">Одноклассники</label>
-                        <input class="form__ok form-input" id="ok" name="ok" type="url" placeholder="ok.com/shans">
-                        <img class="form__icon" src="icons/ok.svg" alt="Иконка Одноклассники">
-                    </div>
-                    <div class="form__container form__container_no-description form__facebook-container">
-                        <label class="form__label visually-hidden" for="facebook">Facebook</label>
-                        <input class="form__facebook form-input" id="facebook" name="facebook" type="url"
-                               placeholder="facebook.com/shans">
-                        <img class="form__icon" src="icons/facebook.svg" alt="Иконка Facebook">
-                    </div>
-                    <div class="form__container form__container_no-description form__instagram-container">
-                        <label class="form__label visually-hidden" for="instagram">Instagram</label>
-                        <input class="form__instagram form-input" id="instagram" name="instagram" type="url"
-                               placeholder="instagram.com/shans">
-                        <img class="form__icon" src="icons/instagram.svg" alt="Иконка Instagram">
-                    </div>
-                    <div class="form__container form__container_no-description form__youtube-container">
-                        <label class="form__label visually-hidden" for="youtube">Youtube</label>
-                        <input class="form__youtube form-input" id="youtube" name="youtube" type="url"
-                               placeholder="youtube.com/shans">
-                        <img class="form__icon" src="icons/youtube.svg" alt="Иконка Youtube">
-                    </div>
-                    <div class="form__container form__ceo-container">
-                        <label class="form__label" for="ceo">Руководитель</label>
-                        <input class="form__ceo form-input" id="ceo" name="ceo" type="text"
-                               placeholder="Александров Иван Васильевич">
-                    </div>
-                </div>
-                <div class="form__buttons">
-                    <button class="form__send-button button button-fullwidth" type="submit">Стать партнёром проекта</button>
-                    <button class="form__reset-button button button-fullwidth" type="button">Отменить</button>
-                </div>
-            </form>
-        </section>
+                </form>
+            </section>
+        </div>
     </main>
 
     <script src="js/app.js" type="module"></script>
