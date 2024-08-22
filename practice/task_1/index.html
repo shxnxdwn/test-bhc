@@ -2,21 +2,93 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Task 1</title>
 </head>
-<body>
-<header class="header">
-    <h1 class="header__title">Task 1</h1>
-</header>
+<body class="body">
+    <header class="header">
+        <h1 class="header__title">Task 1</h1>
+    </header>
 
-<main class="main">
-    <section class="content">
-        <h2 class="visually-hidden">Контент</h2>
-    </section>
-</main>
+    <main class="main">
+        <section class="content">
+            <h2 class="content__title visually-hidden">Контент</h2>
+            <button class="content__button button">Написать</button>
+        </section>
 
-<script src="js/app.js" type="module"></script>
+        <section class="modal">
+            <h2 class="modal__title">Стать партнёром проекта</h2>
+
+            <form class="modal__form form" action="#" enctype="multipart/form-data" method="post">
+                <div class="form__top">
+                    <div class="form__top-left">
+                        <div class="form__organization-name-container">
+                            <label for="organization-name">Название организации</label>
+                            <input class="form__organization-name" type="text" id="organization-name"
+                                   name="organization-name" value="АВЦ" required>
+                        </div>
+                        <div class="form__phone-container">
+                            <label for="phone">Телефон</label>
+                            <input class="form__phone" type="tel" id="phone" name="phone" value="+7 933 848-34-33" required>
+                        </div>
+                        <div class="form__email-container">
+                            <label for="email">E-mail</label>
+                            <input class="form__email" type="email" id="email" name="email" value="avc@gmail.com" required>
+                        </div>
+                    </div>
+                    <div class="form__top-right">
+                        <div class="form__logo-container">
+                            <label for="logo">Логотип (jpeg, png)</label>
+                            <input class="form__logo" type="file" id="logo" name="logo" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__bottom">
+                    <div class="form__activity-container">
+                        <label for="activity">Направление</label>
+                        <select class="form__activity" id="activity" name="activity" required>
+                            <option value="Экология" selected>Экология</option>
+                            <option value="Биология">Биология</option>
+                        </select>
+                    </div>
+                    <div class="form__site-container">
+                        <label for="site"></label>
+                        <input class="form__site" type="url" id="site" name="site" value="avc.ru">
+                    </div>
+                    <div class="form__vk-container">
+                        <label for="vk"></label>
+                        <input class="form__vk" id="vk" name="vk" type="url" value="vk.com/shans">
+                    </div>
+                    <div class="form__ok-container">
+                        <label for="ok"></label>
+                        <input class="form__ok" id="ok" name="ok" type="url" value="ok.com/shans">
+                    </div>
+                    <div class="form__facebook-container">
+                        <label for="facebook"></label>
+                        <input class="form__facebook" id="facebook" name="facebook" type="url" value="facebook.com/shans">
+                    </div>
+                    <div class="form__instagram-container">
+                        <label for="instagram"></label>
+                        <input class="form__instagram" id="instagram" name="instagram" type="url"
+                               value="instagram.com/shans">
+                    </div>
+                    <div class="form__youtube-container">
+                        <label for="youtube"></label>
+                        <input class="form__youtube" id="youtube" name="youtube" type="url" value="youtube.com/shans">
+                    </div>
+                    <div class="form__ceo-container">
+                        <label for="ceo"></label>
+                        <input class="form__ceo" id="ceo" name="ceo" type="text" value="Александров Иван Васильевич">
+                    </div>
+                    <button class="form__send-button" type="submit">Стать партнёром проекта</button>
+                    <button class="form__reset-button" type="button">Отменить</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/app.js" type="module"></script>
 </body>
 </html>

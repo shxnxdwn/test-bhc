@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body {
+.body {
     font-family: 'Arial', sans-serif;
     line-height: 1.5;
 }
@@ -14,8 +14,8 @@ body {
     width: 1px;
     height: 1px;
     margin: -1px;
-    border: 0;
     padding: 0;
+    border: 0;
     white-space: nowrap;
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
@@ -24,14 +24,14 @@ body {
 
 .header {
     padding: 20px;
-    color: white;
+    color: #FFFFFF;
     text-align: center;
-    background-color: #79d77d;
+    background-color: #79D77D;
 }
 
-.main {
-    margin: 20px auto;
+.content {
     max-width: 1200px;
+    margin: 20px auto;
 }
 
 .table {
@@ -41,19 +41,19 @@ body {
 
 .table__head th {
     padding: 10px;
-    border: 1px solid #dddddd;
+    border: 1px solid #DDDDDD;
     text-align: center;
-    background-color: #f2f2f2;
+    background-color: #F2F2F2;
 }
 
 .table__body td {
     padding: 10px;
-    border: 1px solid #dddddd;
+    border: 1px solid #DDDDDD;
     text-align: center;
 }
 
 .table__body tr:nth-child(even) {
-    background-color: #e6f3e5;
+    background-color: #E6F3E5;
 }
 
 .table__body td:nth-child(1),

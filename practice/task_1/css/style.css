@@ -1,12 +1,53 @@
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato/Lato-SemiBold.woff2') format("woff2"),
+         url('../fonts/Lato/Lato-SemiBold.woff') format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-ExtraBold.woff2') format("woff2"),
+         url('../fonts/Montserrat/Montserrat-ExtraBold.woff') format("woff");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../fonts/PT-Sans/PT-Sans-Regular.woff2') format("woff2"),
+         url('../fonts/PT-Sans/PT-Sans-Regular.woff') format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../fonts/PT-Sans/PT-Sans-Bold.woff2') format("woff2"),
+         url('../fonts/PT-Sans/PT-Sans-Bold.woff') format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+.body {
+    min-height: 100vh;
     font-family: 'Arial', sans-serif;
-    line-height: 1.5;
+}
+
+.modal-open {
+    overflow: hidden;
+    background-color: #6A6E72;
 }
 
 .visually-hidden {
@@ -27,4 +68,39 @@ body {
     color: white;
     text-align: center;
     background-color: #79d77d;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.content__button {
+    display: inline-block;
+    margin-top: 100px;
+}
+
+.button {
+    width: 147px;
+    padding-top: 14px;
+    padding-bottom: 16px;
+    border: 1px solid #E5266E;
+    border-radius: 4px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 18px;
+    color: #E5266E;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #fce9ec;
+}
+
+.button:active {
+    background-color: #ffc3cb;
 }

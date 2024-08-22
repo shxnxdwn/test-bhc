@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body {
+.body {
     font-family: 'Arial', sans-serif;
     line-height: 1.5;
 }
@@ -26,7 +26,7 @@ body {
     padding: 20px;
     color: #FFFFFF;
     text-align: center;
-    background-color: #79d77d;
+    background-color: #79D77D;
 }
 
 .content {
@@ -38,7 +38,7 @@ body {
     display: block;
     width: 100%;
     padding: 20px;
-    border: 1px solid #79d77d;
+    border: 1px solid #79D77D;
     border-radius: 5px;
     outline: none;
     font-size: 16px;
@@ -46,7 +46,7 @@ body {
 }
 
 .search:focus {
-    background-color: #e6f3e5;
+    background-color: #E6F3E5;
 }
 
 .table {
@@ -63,19 +63,19 @@ body {
 
 .table__head th {
     padding: 10px;
-    border: 1px solid #dddddd;
+    border: 1px solid #DDDDDD;
     text-align: center;
-    background-color: #f2f2f2;
+    background-color: #F2F2F2;
 }
 
 .table__body td {
     padding: 10px;
-    border: 1px solid #dddddd;
+    border: 1px solid #DDDDDD;
     text-align: center;
 }
 
 .table__body tr:nth-child(even) {
-    background-color: #e6f3e5;
+    background-color: #E6F3E5;
 }
 
 .table__body td:nth-child(1),
