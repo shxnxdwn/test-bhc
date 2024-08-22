@@ -1,6 +1,6 @@
 import { debounce } from './debounce.js';
 
-const filterClicked = {
+const filterStage = {
     userId: true,
     postId: true,
     postTitle: true,
@@ -30,41 +30,41 @@ const filterPosts = (postsArray, renderCb) => {
     };
 
 
-    const sortPosts = (data, filterType) => {
+    const sortPosts = (postsArray, filterType) => {
         switch (filterType) {
             case 'user-id':
-                filterClicked.userId = !filterClicked.userId;
-                return data.slice().sort((postA, postB) =>
-                    filterClicked.userId ? postA.userId - postB.userId : postB.userId - postA.userId
+                filterStage.userId = !filterStage.userId;
+                return postsArray.slice().sort((postA, postB) =>
+                    filterStage.userId ? postA.userId - postB.userId : postB.userId - postA.userId
                 );
 
             case 'post-id':
-                filterClicked.postId = !filterClicked.postId;
-                return data.slice().sort((postA, postB) =>
-                    filterClicked.postId ? postA.id - postB.id : postB.id - postA.id
+                filterStage.postId = !filterStage.postId;
+                return postsArray.slice().sort((postA, postB) =>
+                    filterStage.postId ? postA.id - postB.id : postB.id - postA.id
                 );
 
             case 'post-title':
-                filterClicked.postTitle = !filterClicked.postTitle;
-                return data.slice().sort((postA, postB) =>
-                    filterClicked.postTitle ? postA.title.length - postB.title.length : postB.title.length - postA.title.length
+                filterStage.postTitle = !filterStage.postTitle;
+                return postsArray.slice().sort((postA, postB) =>
+                    filterStage.postTitle ? postA.title.length - postB.title.length : postB.title.length - postA.title.length
                 );
 
             case 'post-body':
-                filterClicked.postBody = !filterClicked.postBody;
-                return data.slice().sort((postA, postB) =>
-                    filterClicked.postBody ? postA.body.length - postB.body.length : postB.body.length - postA.body.length
+                filterStage.postBody = !filterStage.postBody;
+                return postsArray.slice().sort((postA, postB) =>
+                    filterStage.postBody ? postA.body.length - postB.body.length : postB.body.length - postA.body.length
                 );
 
             default:
-                return data;
+                return postsArray;
         }
     };
 
 
     filterContainer.addEventListener('click', (event) => {
         if (event.target.closest('.filter-container')) {
-            const [filterClass] = event.target.classList;
+            const [ filterClass ] = event.target.classList;
             const filterType = filterClass.replace('table__', '');
 
             filteredPosts = sortPosts(filteredPosts, filterType);
