@@ -1,4 +1,3 @@
-import { hidePlaceholder } from './hide-placeholder.js';
+import './hide-placeholder.js';
 import './show-modal.js';
-
-hidePlaceholder();
+import './validation.js';

@@ -343,3 +343,39 @@
     line-height: 24px;
     background-color: transparent;
 }
+
+
+@media (max-width: 840px) {
+    .modal {
+        max-width: 625px;
+        padding: 40px 50px;
+    }
+}
+
+@media (max-width: 670px) {
+    .modal {
+        max-width: 90%;
+    }
+    .modal__title {
+        text-align: center;
+    }
+    .form__top {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px
+    }
+    .form__top-left {
+        width: 100%;
+    }
+}
+
+@media (max-width: 550px) {
+    .form-input,
+    .form-input::placeholder {
+        font-size: 14px;
+    }
+    .form__container {
+        padding: 7px 4px 7px 8px;
+    }
+}

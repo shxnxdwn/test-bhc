@@ -3,4 +3,4 @@ const hidePlaceholder = () => {
     selectPlaceHolder.style.display = 'none';
 };
 
-export { hidePlaceholder };
+hidePlaceholder();
