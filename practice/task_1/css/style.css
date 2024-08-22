@@ -253,7 +253,7 @@
     cursor: pointer;
 }
 
-.form__label_logo:before {
+.form__label_logo::before {
     content: url('../icons/file-upload.svg');
     position: absolute;
     top: 34%;
@@ -261,7 +261,7 @@
     display: block;
 }
 
-.form__label_logo:after {
+.form__label_logo::after {
     content: 'Выберите файл';
     position: absolute;
     top: 53%;
@@ -344,6 +344,7 @@
     background-color: transparent;
 }
 
+/* == Media ========================================================================================================= */
 
 @media (max-width: 840px) {
     .modal {
