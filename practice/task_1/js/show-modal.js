@@ -5,6 +5,7 @@ const modalWrapper = document.querySelector('.modal-wrapper');
 const showModal = () => {
     document.body.classList.add('modal-open');
     modalWrapper.classList.remove('visually-hidden');
+    openModalButton.classList.add('visually-hidden');
 
     setTimeout(() => {
         openModalButton.removeEventListener('click', showModal);
@@ -16,6 +17,7 @@ const showModal = () => {
 const closeModal = (event) => {
     if (!event.target.closest('.modal')) {
         document.body.classList.remove('modal-open');
+        openModalButton.classList.remove('visually-hidden');
         modalWrapper.classList.add('visually-hidden');
 
         setTimeout(() => {
