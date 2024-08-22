@@ -15,7 +15,7 @@
     <main class="main">
         <section class="content">
             <h2 class="content__title visually-hidden">Контент</h2>
-            <button class="content__button button">Написать</button>
+            <button class="content__button button-show button">Написать</button>
         </section>
 
         <section class="modal">
@@ -25,65 +25,70 @@
                 <div class="form__top">
                     <div class="form__top-left">
                         <div class="form__organization-name-container">
-                            <label for="organization-name">Название организации</label>
-                            <input class="form__organization-name" type="text" id="organization-name"
-                                   name="organization-name" value="АВЦ" required>
+                            <label class="form__label form__label_required" for="organization-name">Название организации</label>
+                            <input class="form__organization-name form-input" type="text" id="organization-name"
+                                   name="organization-name" placeholder="АВЦ" required>
                         </div>
                         <div class="form__phone-container">
-                            <label for="phone">Телефон</label>
-                            <input class="form__phone" type="tel" id="phone" name="phone" value="+7 933 848-34-33" required>
+                            <label class="form__label form__label_required" for="phone">Телефон</label>
+                            <input class="form__phone form-input" type="tel" id="phone" name="phone"
+                                   placeholder="+7 933 848-34-33" required>
                         </div>
                         <div class="form__email-container">
-                            <label for="email">E-mail</label>
-                            <input class="form__email" type="email" id="email" name="email" value="avc@gmail.com" required>
+                            <label class="form__label form__label_required" for="email">E-mail</label>
+                            <input class="form__email form-input" type="email" id="email" name="email"
+                                   placeholder="avc@gmail.com" required>
                         </div>
                     </div>
                     <div class="form__top-right">
                         <div class="form__logo-container">
-                            <label for="logo">Логотип (jpeg, png)</label>
-                            <input class="form__logo" type="file" id="logo" name="logo" required>
+                            <label class="form__label form__label_required" for="logo">Логотип (jpeg, png)</label>
+                            <input class="form__logo form-input" type="file" id="logo" name="logo" required>
                         </div>
                     </div>
                 </div>
                 <div class="form__bottom">
                     <div class="form__activity-container">
-                        <label for="activity">Направление</label>
-                        <select class="form__activity" id="activity" name="activity" required>
+                        <label class="form__label form__label_required" for="activity">Направление</label>
+                        <select class="form__activity form-input" id="activity" name="activity" required>
                             <option value="Экология" selected>Экология</option>
                             <option value="Биология">Биология</option>
                         </select>
                     </div>
                     <div class="form__site-container">
-                        <label for="site"></label>
-                        <input class="form__site" type="url" id="site" name="site" value="avc.ru">
+                        <label class="form__label" for="site"></label>
+                        <input class="form__site form-input" type="url" id="site" name="site" placeholder="avc.ru">
                     </div>
                     <div class="form__vk-container">
-                        <label for="vk"></label>
-                        <input class="form__vk" id="vk" name="vk" type="url" value="vk.com/shans">
+                        <label class="form__label" for="vk"></label>
+                        <input class="form__vk form-input" id="vk" name="vk" type="url" placeholder="vk.com/shans">
                     </div>
                     <div class="form__ok-container">
-                        <label for="ok"></label>
-                        <input class="form__ok" id="ok" name="ok" type="url" value="ok.com/shans">
+                        <label class="form__label" for="ok"></label>
+                        <input class="form__ok form-input" id="ok" name="ok" type="url" placeholder="ok.com/shans">
                     </div>
                     <div class="form__facebook-container">
-                        <label for="facebook"></label>
-                        <input class="form__facebook" id="facebook" name="facebook" type="url" value="facebook.com/shans">
+                        <label class="form__label" for="facebook"></label>
+                        <input class="form__facebook form-input" id="facebook" name="facebook" type="url"
+                               placeholder="facebook.com/shans">
                     </div>
                     <div class="form__instagram-container">
-                        <label for="instagram"></label>
-                        <input class="form__instagram" id="instagram" name="instagram" type="url"
-                               value="instagram.com/shans">
+                        <label class="form__label" for="instagram"></label>
+                        <input class="form__instagram form-input" id="instagram" name="instagram" type="url"
+                               placeholder="instagram.com/shans">
                     </div>
                     <div class="form__youtube-container">
-                        <label for="youtube"></label>
-                        <input class="form__youtube" id="youtube" name="youtube" type="url" value="youtube.com/shans">
+                        <label class="form__label" for="youtube"></label>
+                        <input class="form__youtube form-input" id="youtube" name="youtube" type="url"
+                               placeholder="youtube.com/shans">
                     </div>
                     <div class="form__ceo-container">
-                        <label for="ceo"></label>
-                        <input class="form__ceo" id="ceo" name="ceo" type="text" value="Александров Иван Васильевич">
+                        <label class="form__label" for="ceo"></label>
+                        <input class="form__ceo form-input" id="ceo" name="ceo" type="text"
+                               placeholder="Александров Иван Васильевич">
                     </div>
-                    <button class="form__send-button" type="submit">Стать партнёром проекта</button>
-                    <button class="form__reset-button" type="button">Отменить</button>
+                    <button class="form__send-button button button-fullwidth" type="submit">Стать партнёром проекта</button>
+                    <button class="form__reset-button button button-fullwidth" type="button">Отменить</button>
                 </div>
             </form>
         </section>
