@@ -15,7 +15,7 @@ const showModal = () => {
 
 
 const closeModal = (event) => {
-    if (!event.target.closest('.modal')) {
+    if (event.target.classList.contains('form__close-button') || !event.target.closest('.modal')) {
         document.body.classList.remove('modal-open');
         openModalButton.classList.remove('visually-hidden');
         modalWrapper.classList.add('visually-hidden');
